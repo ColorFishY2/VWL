@@ -1,0 +1,81 @@
+#<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz – Soziale Marktwirtschaft</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Quiz: Soziale Marktwirtschaft</h1>
+      <p class="sub">10 Fragen • Ja/Nein + Multiple Choice • Score am Ende</p>
+    </header>
+
+    <section class="card" id="startView">
+      <div class="row">
+        <div>
+          <h2>Bereit?</h2>
+          <p>Beantworte die Fragen. Am Ende bekommst du deinen Score und kannst dir die Lösungen ansehen.</p>
+        </div>
+        <div class="pill" id="metaInfo">0 Fragen</div>
+      </div>
+
+      <div class="actions">
+        <button class="btn primary" id="startBtn">Start</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="quizView" aria-live="polite">
+      <div class="topbar">
+        <div class="progress">
+          <div class="progress__bar" id="progressBar"></div>
+        </div>
+        <div class="counter" id="counter">Frage 1/1</div>
+      </div>
+
+      <h2 class="question" id="questionText">Frage</h2>
+      <p class="hint" id="questionHint"></p>
+
+      <div class="answers" id="answers"></div>
+
+      <div class="actions">
+        <button class="btn" id="backBtn" type="button">Zurück</button>
+        <button class="btn primary" id="nextBtn" type="button" disabled>Weiter</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="resultView">
+      <h2>Ergebnis</h2>
+      <p class="score" id="scoreText">0%</p>
+      <p class="sub" id="scoreMsg"></p>
+
+      <div class="actions">
+        <button class="btn" id="reviewBtn">Lösungen ansehen</button>
+        <button class="btn primary" id="restartBtn">Neu starten</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="reviewView">
+      <div class="row">
+        <h2>Lösungen</h2>
+        <div class="pill" id="reviewPill"></div>
+      </div>
+
+      <div id="reviewList" class="review"></div>
+
+      <div class="actions">
+        <button class="btn" id="backToResultBtn">Zurück</button>
+        <button class="btn primary" id="restartBtn2">Neu starten</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>WG225 • Januar 2026</small>
+    </footer>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
